@@ -2,13 +2,11 @@
   wayland.windowManager.hyprland.settings = {
     bind = [
       "$mod,T, exec, ${pkgs.kitty}/bin/kitty" # Kitty
-      "$mod,G, exec, ${pkgs.ghostty}/bin/ghostty" # Ghostty
+      "$mod,G, exec, ${pkgs.google-chrome}/bin/google-chrome-stable" # Google Chrome
       "$mod,E, exec, ${pkgs.nautilus}/bin/nautilus" # nautilus
       "$mod,Y, exec, ${pkgs.kitty}/bin/kitty -e ${pkgs.yazi}/bin/yazi" # Yazi
-      "$mod,B, exec, ${pkgs.google-chrome}/bin/google-chrome-stable" # google-chrome
       "$mod,K, exec, ${pkgs.bitwarden}/bin/bitwarden" # Bitwarden
       "$mod,L, exec, ${pkgs.hyprlock}/bin/hyprlock" # Lock
-      "$mod,P, exec, ${pkgs.jetbrains.phpstorm}/bin/phpstorm" # Phpstorm
       "$mod,X, exec, powermenu" # Powermenu
       "$mod,SPACE, exec, menu" # Launcher
       "$shiftMod,SPACE, exec, hyprfocus-toggle" # Toggle HyprFocus

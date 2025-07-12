@@ -16,7 +16,6 @@
     ../../home/programs/markdown
     ../../home/programs/thunar
     ../../home/programs/vscode
-    ../../home/programs/phpstorm
     ../../home/programs/tinkerwell
     ../../home/programs/zen-browser
     #../../home/programs/memos  #CHANGEME only if have memos installed
