@@ -1,7 +1,6 @@
 { pkgs, config, ... }:
 {
   home.packages = with pkgs; [
-    unstable.windsurf
     unstable.claude-code
     unstable.task-master-ai
     unstable.gemini-cli
