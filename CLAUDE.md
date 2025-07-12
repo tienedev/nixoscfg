@@ -9,7 +9,7 @@ This is **Nixy**, a NixOS configuration repository that provides a complete Hypr
 ## Build and Development Commands
 
 ### System Management
-- `sudo nixos-rebuild switch --flake ~/.config/nixos#yourhostname` - Rebuild the system
+- `sudo nixos-rebuild switch --flake ~/.config/nixos#hostname` - Rebuild the system (replace hostname with: titi-framework, titi-macbook, or nixos)
 - `nixy` - Interactive system management wizard (rebuild, upgrade, garbage collection, etc.)
 - `nixy rebuild` - Quick system rebuild
 - `nixy upgrade` - Rebuild with flake updates
@@ -92,7 +92,8 @@ Scripts are located in `home/scripts/` and automatically added to PATH:
 ## Important Considerations
 
 ### Security Notes
-- GitHub token in `hosts/laptop/configuration.nix:35` should be removed or secured
+- Weather API key in variables.nix files contains real API keys - should be secured with sops-nix
+- Personal git credentials are stored in variables.nix files
 - Secrets should use sops-nix or similar secure solutions
 - Remove personal information before sharing configurations
 
@@ -122,11 +123,15 @@ Keybindings documentation is available in `docs/KEYBINDINGS-HYPRLAND.md`.
 ## Flake Structure
 
 The repository uses Nix flakes with the following key inputs:
-- `nixpkgs` - Main package repository
+- `nixpkgs` and `nixpkgs-unstable` - Package repositories
+- `nixos-hardware` - Hardware-specific configurations
 - `home-manager` - User environment management
 - `nixvim` - Neovim configuration framework
 - `stylix` - System-wide theming
-- `hyprland` and related Hypr ecosystem packages
+- `hyprland`, `hyprpanel`, `hyprpolkitagent`, `hyprspace` - Hypr ecosystem
+- `spicetify-nix` - Spotify theming
 - `sops-nix` - Secrets management
+- `apple-fonts` - Apple font support
+- `nixy-wallpapers` - Wallpaper collection
 
-Host configurations are defined in `flake.nix` under `nixosConfigurations`.
+Current host configurations: `nixos` (template), `titi-framework` (Framework laptop), `titi-macbook` (MacBook Air 2013)

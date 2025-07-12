@@ -24,8 +24,8 @@
     #  ../../nixos/framework-optimizations.nix
 
     # Choose your theme here
-    #../../themes/nixy.nix
-    ../../themes/gruvbox.nix
+    ../../themes/nixy.nix
+    #../../themes/gruvbox.nix
     #../../themes/pinky.nix
     #../../themes/gruvbox-dark.nix
     #../../themes/rose-pine.nix

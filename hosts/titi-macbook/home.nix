@@ -7,7 +7,6 @@
     # Programs
     ../../home/programs/kitty
     #../../home/programs/ghostty
-    ../../home/programs/firefox
     ../../home/programs/chromium
     #../../home/programs/nvim
     ../../home/programs/shell

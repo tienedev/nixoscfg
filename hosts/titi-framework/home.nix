@@ -7,7 +7,6 @@
     # Programs
     ../../home/programs/kitty
     #../../home/programs/ghostty
-    ../../home/programs/firefox
     ../../home/programs/chromium
     #../../home/programs/nvim
     ../../home/programs/shell
@@ -46,6 +45,8 @@
 
   ];
 
+  # Fix Qt and stylix warnings
+  stylix.targets.qt.platform = "qtct";
 
   home = {
     inherit (config.var) username;

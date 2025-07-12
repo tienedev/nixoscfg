@@ -42,7 +42,6 @@
         "dash-to-dock@micxgx.gmail.com"
       ];
       favorite-apps = [
-        "firefox.desktop"
         "org.gnome.Nautilus.desktop"
         "kitty.desktop"
         "code.desktop"
