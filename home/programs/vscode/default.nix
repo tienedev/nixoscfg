@@ -17,6 +17,10 @@
           waderyan.gitblame
           wix.vscode-import-cost
           editorconfig.editorconfig
+          github.copilot
+          github.copilot-chat
+          ms-vscode-remote.remote-containers
+          esbenp.prettier-vscode
         ] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace (import ./extensions.nix { inherit pkgs; })
       ;
       profiles.default.userSettings = {
@@ -29,6 +33,8 @@
         "editor.inlayHints.fontFamily" = "JetBrainsMono Nerd Font";
         "editor.inlineSuggest.fontFamily" = "JetBrainsMono Nerd Font";
         "editor.minimap.sectionHeaderFontSize" = 11.142857142857142;
+        "git.autofetch" = true;
+        "git.enableSmartCommit" = true;
         "markdown.preview.fontFamily" = "Source Sans Pro";
         "markdown.preview.fontSize" = 17.333333333333332;
         "scm.inputFontFamily" = "JetBrainsMono Nerd Font";
@@ -36,8 +42,6 @@
         "screencastMode.fontSize" = 69.33333333333333;
         "terminal.integrated.fontSize" = 17.333333333333332;
         "workbench.colorTheme" = "Stylix";
-        "git.enableSmartCommit" = true;
-        "git.autofetch" = true;
       };
   };
 }

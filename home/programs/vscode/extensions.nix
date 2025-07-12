@@ -1,12 +1,5 @@
 { pkgs, ... }: [
   {
-    name = "vscode-jetbrains-keybindings";
-    publisher = "isudox";
-    version = "0.1.9";
-    # cspell:disable-next-line
-    sha256 = "0fb0m1r17lxk132m94gklxkr5y1pmnxgiafciaailsbqv9w3ms33";
-  }
-  {
     name = "vscode-conventional-commits";
     publisher = "vivaxy";
     version = "1.26.0";
@@ -18,5 +11,41 @@
     publisher = "anthropic";
     version = "1.0.31";
     hash = "sha256-3brSSb6ERY0In5QRmv5F0FKPm7Ka/0wyiudLNRSKGBg=";
+  }
+  {
+    name = "codesnap";
+    publisher = "adpyke";
+    version = "1.3.4";
+    hash = "sha256-dR6qODSTK377OJpmUqG9R85l1sf9fvJJACjrYhSRWgQ=";
+  }
+  {
+    name = "simple-react-snippets";
+    publisher = "burkeholland";
+    version = "1.2.7";
+    sha256 = "03gryblj2y4bww56b0ixcsvsmvi5wc4iag3gym5l02y8f83nplzc";
+  }
+  {
+    name = "peacock";
+    publisher = "johnpapa";
+    version = "1.12.2";
+    hash = "sha256-VVUlIb/N3+TaODKgQnfkSKEa9qdaBdgmnSBGIGGJUKk=";
+  }
+  {
+    name = "pretty-ts-errors";
+    publisher = "yoavbls";
+    version = "0.6.0";
+    hash = "sha256-cmleAs7EMXT1z0o8Uq5ne2LrthUt/vhcN+iqfAy/i/8=";
+  }
+  {
+    name = "vscode-icons-mac";
+    publisher = "wayou";
+    version = "7.25.3";
+    hash = "sha256-6XgeVyKQzQLBsK0k7eBbIqsjG1YIwKMQu8kiOe1IXXI=";
+  }
+  {
+    name = "claude-dev";
+    publisher = "saoudrizwan";
+    version = "2.1.1";
+    hash = "sha256-T1CdEQ8vBLJCgWXqJEOPFz8pSqj3bJZhJiETiF5UKo8=";
   }
 ]
