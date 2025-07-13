@@ -17,7 +17,7 @@
 
   # Power management Framework laptop
   services.tlp = {
-    enable = true;
+    enable = false;
     settings = {
       # Optimisations CPU
       CPU_SCALING_GOVERNOR_ON_AC = "performance";
@@ -135,7 +135,7 @@
   };
 
   # Optimisations audio pour Framework
-  hardware.pulseaudio.enable = false;
+  services.pulseaudio.enable = false;
   services.pipewire = {
     enable = true;
     alsa.enable = true;
@@ -152,7 +152,7 @@
 
   # Outils spécifiques Framework
   environment.systemPackages = with pkgs; [
-    # framework-tool        # CLI pour gérer le firmware (n'existe pas dans nixpkgs)
+    framework-tool        # CLI pour gérer le firmware (n'existe pas dans nixpkgs)
     intel-gpu-tools      # Pour débugger Intel Xe
     nvme-cli            # Pour gérer le SSD NVMe
     powertop            # Analyse de consommation

@@ -21,7 +21,7 @@
     ../../nixos/gnome.nix
     ../../nixos/hosts-config.nix #TODO: move this to Actual config
     
-    #  ../../nixos/framework-optimizations.nix
+    ../../nixos/framework-optimizations.nix
 
     # Choose your theme here
     ../../themes/nixy.nix
