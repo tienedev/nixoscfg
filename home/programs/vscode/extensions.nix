@@ -25,12 +25,6 @@
     sha256 = "03gryblj2y4bww56b0ixcsvsmvi5wc4iag3gym5l02y8f83nplzc";
   }
   {
-    name = "peacock";
-    publisher = "johnpapa";
-    version = "1.12.2";
-    hash = "sha256-VVUlIb/N3+TaODKgQnfkSKEa9qdaBdgmnSBGIGGJUKk=";
-  }
-  {
     name = "pretty-ts-errors";
     publisher = "yoavbls";
     version = "0.6.0";
@@ -46,6 +40,6 @@
     name = "claude-dev";
     publisher = "saoudrizwan";
     version = "2.1.1";
-    hash = "sha256-T1CdEQ8vBLJCgWXqJEOPFz8pSqj3bJZhJiETiF5UKo8=";
+    hash = "sha256-4Pr/iG5w4oUJW8SsTiEjWd8ZNkRTJAltg7FjVoE2P24=";
   }
 ]
