@@ -3,10 +3,11 @@
     bind = [
       "$mod,T, exec, ${pkgs.kitty}/bin/kitty" # Kitty
       "$mod,G, exec, ${pkgs.google-chrome}/bin/google-chrome-stable" # Google Chrome
-      "$mod,E, exec, ${pkgs.nautilus}/bin/nautilus" # nautilus
+      "$mod,E, exec, ${pkgs.nautilus}/bin/nautilus" # Nautilus
       "$mod,Y, exec, ${pkgs.kitty}/bin/kitty -e ${pkgs.yazi}/bin/yazi" # Yazi
       "$mod,K, exec, ${pkgs.bitwarden}/bin/bitwarden" # Bitwarden
       "$mod,L, exec, ${pkgs.hyprlock}/bin/hyprlock" # Lock
+      "$mod,D, exec, ${pkgs.discord}/bin/discord" # Discord
       "$mod,V, exec, code" # VS Code
       "$mod,X, exec, powermenu" # Powermenu
       "$mod,SPACE, exec, menu" # Launcher
@@ -34,7 +35,6 @@
       "$shiftMod,C, exec, clipboard" # Clipboard picker with wofi
       "$shiftMod,E, exec, ${pkgs.wofi-emoji}/bin/wofi-emoji" # Emoji picker with wofi
       "$mod,F2, exec, night-shift" # Toggle night shift
-      "$mod,F3, exec, night-shift" # Toggle night shift
 
       # Navigation entre workspaces avec SUPER + flèches/arrows keyboard
       "$shiftMod, right, workspace, e+1"
