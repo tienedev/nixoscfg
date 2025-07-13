@@ -21,13 +21,13 @@
   {
     name = "simple-react-snippets";
     publisher = "burkeholland";
-    version = "1.2.7";
+    version = "1.2.8";
     sha256 = "03gryblj2y4bww56b0ixcsvsmvi5wc4iag3gym5l02y8f83nplzc";
   }
   {
     name = "pretty-ts-errors";
     publisher = "yoavbls";
-    version = "0.6.0";
+    version = "0.6.1";
     hash = "sha256-cmleAs7EMXT1z0o8Uq5ne2LrthUt/vhcN+iqfAy/i/8=";
   }
   {
@@ -39,7 +39,7 @@
   {
     name = "claude-dev";
     publisher = "saoudrizwan";
-    version = "2.1.1";
+    version = "3.8.14";
     hash = "sha256-4Pr/iG5w4oUJW8SsTiEjWd8ZNkRTJAltg7FjVoE2P24=";
   }
 ]
