@@ -7,6 +7,7 @@
       "$mod,Y, exec, ${pkgs.kitty}/bin/kitty -e ${pkgs.yazi}/bin/yazi" # Yazi
       "$mod,K, exec, ${pkgs.bitwarden}/bin/bitwarden" # Bitwarden
       "$mod,L, exec, ${pkgs.hyprlock}/bin/hyprlock" # Lock
+      "$mod,V, exec, code" # VS Code
       "$mod,X, exec, powermenu" # Powermenu
       "$mod,SPACE, exec, menu" # Launcher
       "$shiftMod,SPACE, exec, hyprfocus-toggle" # Toggle HyprFocus
