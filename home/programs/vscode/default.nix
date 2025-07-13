@@ -1,11 +1,5 @@
 { pkgs, config, ... }:
 {
-  home.packages = with pkgs; [
-    unstable.claude-code
-    unstable.task-master-ai
-    unstable.gemini-cli
-  ];
-
   programs.vscode = {
       enable = true;
       profiles.default.extensions = with pkgs.vscode-extensions; [

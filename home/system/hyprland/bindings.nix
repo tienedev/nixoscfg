@@ -8,6 +8,7 @@
       "$mod,K, exec, ${pkgs.bitwarden}/bin/bitwarden" # Bitwarden
       "$mod,L, exec, ${pkgs.hyprlock}/bin/hyprlock" # Lock
       "$mod,D, exec, ${pkgs.discord}/bin/discord" # Discord
+      "$mod,S, exec, ${pkgs.slack}/bin/slack" # Slack
       "$mod,V, exec, code" # VS Code
       "$mod,X, exec, powermenu" # Powermenu
       "$mod,SPACE, exec, menu" # Launcher

@@ -16,6 +16,9 @@
     ../../home/programs/markdown
     ../../home/programs/thunar
     ../../home/programs/vscode
+    ../../home/programs/claude-code
+    ../../home/programs/gemini-cli
+    ../../home/programs/task-master-ai
     ../../home/programs/tinkerwell
     ../../home/programs/zen-browser
     #../../home/programs/memos  #CHANGEME only if have memos installed
@@ -57,7 +60,6 @@
       youtube-music
       vlc
       tenacity
-      signal-desktop
 
       # Dev
       go
