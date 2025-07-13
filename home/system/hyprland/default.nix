@@ -47,7 +47,9 @@ in {
     enable = true;
     xwayland.enable = true;
     systemd.enable = true;
-    package = inputs.hyprland.packages."${pkgs.system}".hyprland;
+    # package = inputs.hyprland.packages."${pkgs.system}".hyprland;
+    package = null;
+    portalPackage = null;
 
     #plugins = [ inputs.hyprspace.packages.${pkgs.system}.Hyprspace ];
 

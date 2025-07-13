@@ -21,6 +21,7 @@
   programs.hyprland = {
     enable = true;
     xwayland.enable = true;
+    withUWSM = true; # Use UWSM for Hyprland
   };
 
   # To prevent getting stuck at shutdown
