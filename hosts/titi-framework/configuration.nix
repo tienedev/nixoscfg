@@ -18,7 +18,7 @@
     #../../nixos/printers.nix #CHANGEME only if have the same printer
     ../../nixos/xdg-portal.nix
     ../../nixos/variables-config.nix
-    ../../nixos/gnome.nix
+    # ../../nixos/gnome.nix  # Removed: Using Hyprland instead
     ../../nixos/hosts-config.nix #TODO: move this to Actual config
     
     ../../nixos/framework-optimizations.nix

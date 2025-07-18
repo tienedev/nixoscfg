@@ -89,31 +89,6 @@
             ./hosts/titi-framework/configuration.nix
           ];
         };
-      titi-macbook = 
-        nixpkgs.lib.nixosSystem {
-          system = "x86_64-linux";
-          modules = [
-            {
-              nixpkgs.overlays = [ 
-                # inputs.hyprpanel.overlay # Removed: hyprpanel is now in nixpkgs
-                (final: prev: {
-                  unstable = import nixpkgs-unstable {
-                    system = prev.system;
-                    config.allowUnfree = true;
-                  };
-                })
-              ];
-              _module.args = { inherit inputs; };
-            }
-            # Modules hardware pour MacBook Air 2013
-            inputs.nixos-hardware.nixosModules.apple-macbook-air-4
-            inputs.nixos-hardware.nixosModules.common-pc-laptop
-            inputs.nixos-hardware.nixosModules.common-pc-laptop-ssd
-            inputs.home-manager.nixosModules.home-manager
-            inputs.stylix.nixosModules.stylix
-            ./hosts/titi-macbook/configuration.nix
-          ];
-        };
     };
   };
 }

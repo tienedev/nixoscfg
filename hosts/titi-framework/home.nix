@@ -43,7 +43,7 @@
     ../../home/system/mime
     ../../home/system/udiskie
     ../../home/system/clipman
-    ../../home/system/gnome
+    # ../../home/system/gnome  # Removed: Using Hyprland instead
 
   ];
 
