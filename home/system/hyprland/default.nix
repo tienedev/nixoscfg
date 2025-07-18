@@ -107,12 +107,12 @@ in {
         "QT_WAYLAND_DISABLE_WINDOWDECORATION,1"
         "ELECTRON_OZONE_PLATFORM_HINT,auto"
         "GTK_THEME,FlatColor:dark"
-        "GTK2_RC_FILES,/home/noureddine/.local/share/themes/FlatColor/gtk-2.0/gtkrc" #CHANGEME
+        "GTK2_RC_FILES,/home/${config.var.username}/.local/share/themes/FlatColor/gtk-2.0/gtkrc"
         "DISABLE_QT5_COMPAT,0"
         "DIRENV_LOG_FORMAT,"
         "SDL_VIDEODRIVER,wayland"
         "CLUTTER_BACKEND,wayland"
-        "GDK_SCALE,1.175" #CHANGEME to what u made in monitor scaling
+        "GDK_SCALE,1.0"
         "XCURSOR_SIZE,32"
         "WLR_DRM_NO_ATOMIC,1"
       ];

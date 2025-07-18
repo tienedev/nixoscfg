@@ -21,7 +21,6 @@
     ../../home/programs/task-master-ai
     ../../home/programs/tinkerwell
     ../../home/programs/zen-browser
-    #../../home/programs/memos  #CHANGEME only if have memos installed
     ../../home/programs/docker
     ../../home/programs/nautilus
 
