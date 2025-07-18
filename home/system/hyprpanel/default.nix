@@ -36,8 +36,8 @@ in {
         {
           "bar.layouts": {
             "*": {
-              "left": ["dashboard", "workspaces", "windowtitle"],
-              "middle": ["media", "update", "notifications", "ram", "cpu"],
+              "left": ["dashboard", "ram", "cpu", "update", "notifications", "media"],
+              "middle": ["workspaces", "windowtitle"],
               "right": ["volume", "network", "bluetooth", "systray", "clock", "kbinput", "battery", "power"]
             }
           },
@@ -45,7 +45,7 @@ in {
           "bar.workspaces.scroll_speed": 5,
           "bar.workspaces.reverse_scroll": true,
           "bar.workspaces.workspaceMask": true,
-          "bar.workspaces.hideUnoccupied": true,
+          "bar.workspaces.hideUnoccupied": false,
           "bar.workspaces.monitorSpecific": true,
           "bar.workspaces.spacing": 2.2,
           "bar.workspaces.workspaces": 9,
