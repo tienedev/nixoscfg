@@ -1,11 +1,14 @@
 keys:
-  - &primary age12yvtj49pfh3fqzqflscm0ek4yzrjhr6cqhn7x89gdxnlykq0xudq5c7334
+  # Cette clé sera remplacée par votre clé publique après génération
+  - &titi age1wvx404flwc4zsx84zzpkd48zvktfw4vfuxy2h7auqrfy9k0hvsms4ygwdt
 creation_rules:
-  - path_regex: hosts/laptop/secrets/secrets.yaml$
+  # Règle générale pour tous les secrets
+  - path_regex: secrets/.*\.yaml$
     key_groups:
       - age:
-        - *primary
-  - path_regex: hosts/server/secrets/secrets.yaml$
+          - *titi
+  # Règles spécifiques par host si nécessaire
+  - path_regex: hosts/.*/secrets/.*\.yaml$
     key_groups:
       - age:
-        - *primary
+          - *titi

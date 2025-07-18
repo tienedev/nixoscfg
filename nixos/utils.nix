@@ -56,6 +56,8 @@ in {
     xdg-utils
     wget
     curl
+    age
+    sops
   ];
 
   services.logind.extraConfig = ''

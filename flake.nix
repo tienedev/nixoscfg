@@ -63,6 +63,7 @@
             inputs.nixos-hardware.nixosModules.common-pc-ssd
             inputs.home-manager.nixosModules.home-manager
             inputs.stylix.nixosModules.stylix
+            inputs.sops-nix.nixosModules.sops
             ./hosts/laptop/configuration.nix # CHANGEME
           ];
         };
@@ -86,6 +87,7 @@
             inputs.nixos-hardware.nixosModules.common-pc-ssd
             inputs.home-manager.nixosModules.home-manager
             inputs.stylix.nixosModules.stylix
+            inputs.sops-nix.nixosModules.sops
             ./hosts/titi-framework/configuration.nix
           ];
         };

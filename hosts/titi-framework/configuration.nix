@@ -17,6 +17,7 @@
     ../../nixos/utils.nix
     ../../nixos/xdg-portal.nix
     ../../nixos/variables-config.nix
+    ../../nixos/sops.nix
     # ../../nixos/gnome.nix  # Removed: Using Hyprland instead
     ../../nixos/hosts-config.nix
     
