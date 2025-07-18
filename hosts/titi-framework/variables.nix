@@ -20,8 +20,8 @@
       email = "tienedev@gmail.com";
     };
 
-    autoUpgrade = false;
-    autoGarbageCollector = false;
+    autoUpgrade = true;
+    autoGarbageCollector = true;
 
     theme = {
       rounding = 15;
