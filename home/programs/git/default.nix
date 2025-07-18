@@ -1,4 +1,4 @@
-{ pkgs, config, ... }:
+{ pkgs, config, lib, ... }:
 let
   username = config.var.git.username;
   email = config.var.git.email;
@@ -7,6 +7,19 @@ in {
   home.packages = with pkgs; [
     gitleaks
   ];
+
+  # Variable d'environnement pour le token GitHub
+  home.sessionVariables = {
+    GITHUB_TOKEN_FILE = "/run/secrets/github_actual_token";
+  };
+
+  # Configuration automatique du token GitHub pour le compte pro
+  home.activation.setupGitHub = lib.hm.dag.entryAfter ["writeBoundary"] ''
+    if [ -f /run/secrets/github_actual_token ]; then
+      echo "Configuration du token GitHub pour le compte pro..."
+      $DRY_RUN_CMD ${pkgs.gh}/bin/gh auth login --with-token < /run/secrets/github_actual_token || true
+    fi
+  '';
 
   programs.gh = {
        enable = true;
@@ -20,10 +33,12 @@ in {
         };
       };
   };
+  
   programs.git = {
     enable = true;
-    userName = username;
-    userEmail = email;
+    # Configuration par défaut (compte perso)
+    userName = username;  # tienedev
+    userEmail = email;    # tienedev@gmail.com
     ignores = [
       ".cache/"
       ".DS_Store"
@@ -36,9 +51,46 @@ in {
       "result"
       "result-*"
     ];
+    
+    # Configuration conditionnelle avec home-manager includes
+    includes = [
+      {
+        condition = "gitdir:~/actualtysoft/";
+        contents = {
+          user = {
+            name = "EtienneActual";
+            email = "etienne.brun@groupactual.eu";
+          };
+          url = {
+            "git@github.com-work:" = {
+              insteadOf = "git@github.com:";
+            };
+          };
+        };
+      }
+      {
+        condition = "gitdir:~/actualtysoft/.git";
+        contents = {
+          user = {
+            name = "EtienneActual";
+            email = "etienne.brun@groupactual.eu";
+          };
+          url = {
+            "git@github.com-work:" = {
+              insteadOf = "git@github.com:";
+            };
+          };
+        };
+      }
+    ];
+    
     extraConfig = {
       init.defaultBranch = "main";
       push.autoSetupRemote = true;
+      
+      # Configuration des URLs pour utiliser le bon compte SSH
+      url."git@github.com-personal:tienedev/".insteadOf = "git@github.com:tienedev/";
+      url."git@github.com-work:EtienneActual/".insteadOf = "git@github.com:EtienneActual/";
     };
     aliases = {
       essa = "push --force";
@@ -67,5 +119,33 @@ in {
       edit-unmerged =
         "!f() { git ls-files --unmerged | cut -f2 | sort -u ; }; hx `f`";
     };
+  };
+
+  # Fichiers de configuration SSH
+  home.file = {
+    ".ssh/config".text = ''
+      # Configuration SSH pour gérer plusieurs comptes GitHub
+
+      # Compte personnel (tienedev)
+      Host github.com-personal
+          HostName github.com
+          User git
+          IdentityFile ~/.ssh/id_ed25519
+          IdentitiesOnly yes
+
+      # Compte professionnel (EtienneActual) 
+      Host github.com-work
+          HostName github.com
+          User git
+          IdentityFile ~/.ssh/id_ed25519_work
+          IdentitiesOnly yes
+
+      # Configuration par défaut pour GitHub (compte perso)
+      Host github.com
+          HostName github.com
+          User git
+          IdentityFile ~/.ssh/id_ed25519
+          IdentitiesOnly yes
+    '';
   };
 }

@@ -21,6 +21,19 @@
         owner = config.var.username;
         mode = "0400"; # Lecture seule pour le propriétaire
       };
+      
+      # Clés SSH
+      ssh_key_personal = {
+        owner = config.var.username;
+        path = "/home/${config.var.username}/.ssh/id_ed25519";
+        mode = "0600"; # Lecture/écriture pour le propriétaire uniquement
+      };
+      
+      ssh_key_work = {
+        owner = config.var.username;
+        path = "/home/${config.var.username}/.ssh/id_ed25519_work";
+        mode = "0600";
+      };
     };
   };
 }
