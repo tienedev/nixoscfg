@@ -22,24 +22,18 @@
     name = "simple-react-snippets";
     publisher = "burkeholland";
     version = "1.2.8";
-    sha256 = "03gryblj2y4bww56b0ixcsvsmvi5wc4iag3gym5l02y8f83nplzc";
+    sha256 = "zrRxJZHRqBMGVkd56Q+wDbCSFfl4X3Kta4sX8ecZmu8=";
   }
   {
     name = "pretty-ts-errors";
     publisher = "yoavbls";
     version = "0.6.1";
-    hash = "sha256-cmleAs7EMXT1z0o8Uq5ne2LrthUt/vhcN+iqfAy/i/8=";
+    hash = "sha256-LvX21nEjgayNd9q+uXkahmdYwzfWBZOhQaF+clFUUF4=";
   }
   {
     name = "vscode-icons-mac";
     publisher = "wayou";
     version = "7.25.3";
     hash = "sha256-6XgeVyKQzQLBsK0k7eBbIqsjG1YIwKMQu8kiOe1IXXI=";
-  }
-  {
-    name = "claude-dev";
-    publisher = "saoudrizwan";
-    version = "3.8.14";
-    hash = "sha256-4Pr/iG5w4oUJW8SsTiEjWd8ZNkRTJAltg7FjVoE2P24=";
   }
 ]
